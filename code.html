@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelParadies - Kategorien</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .title-3d {
+            color: #333;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .title-3d::before, .title-3d::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .title-3d::before {
+            color: #fff;
+            z-index: -1;
+            text-shadow: 
+                1px 1px 0 #333,
+                2px 2px 0 #333,
+                3px 3px 0 #333,
+                4px 4px 0 #333,
+                5px 5px 0 #333,
+                6px 6px 0 #333,
+                7px 7px 0 #333,
+                8px 8px 0 #333,
+                9px 9px 0 #333,
+                10px 10px 0 #333;
+        }
+
+        .title-3d::after {
+            color: rgba(0, 0, 0, 0.1);
+            z-index: -2;
+            transform: translate(0.15em, 0.15em);
+        }
+
+        .game-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .game-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: calc(33.333% - 40px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .game-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .game-item h3 {
+            color: #333;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .game-item p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PixelParadies</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="categories.html">Spiele</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="support.html">Hilfe & Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="multiplayer">
+            <h2 class="title-3d" data-text="Multiplayer Spiele">Multiplayer Spiele</h2>
+            <div class="game-list">
+                <div class="game-item">
+                    <img src="multiplayer1.jpg" alt="Multiplayer Spiel 1">
+                    <h3>Multiplayer Spiel 1</h3>
+                     <main>
+        <button id="gameButton" onclick="window.location.href='game.html'">Zum Spiel</button>
+    </main>
+                    <nav>
+                      <ul>
+                <li><a href="game.html">Spiel spielen!</a></li>
+            </ul>
+        </nav>
+                    <p>Beschreibung des Spiels. Spannende Multiplayer-Action mit Freunden und Fremden.</p>
+                </div>
+                <div class="game-item">
+                    <img src="baustelle.png" alt="Multiplayer Spiel 2">
+                    <h3>Multiplayer Spiel 2</h3>
+                    <p>In Zukunft wird hier ein weiteres Spiel erscheinen...</p>
+                </div>
+                <!-- Weitere Multiplayer-Spiele hier -->
+            </div>
+        </section>
+
+        <section id="strategy">
+            <h2 class="title-3d" data-text="Strategie Spiele">Strategie Spiele</h2>
+            <div class="game-list">
+                <div class="game-item">
+                    <img src="baustelle.png" alt="Strategie Spiel 1">
+                    <h3>Strategie Spiel 1</h3>
+                    <p>In Zukunft wird hier ein weiteres Spiel erscheinen...</p>
+                </div>
+                <div class="game-item">
+                    <img src="baustelle.png" alt="Strategie Spiel 2">
+                    <h3>Strategie Spiel 2</h3>
+                    <p>In Zukunft wird hier ein weiteres Spiel erscheinen...</p>
+                </div>
+                <!-- Weitere Strategie-Spiele hier -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PixelParadies. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
+
